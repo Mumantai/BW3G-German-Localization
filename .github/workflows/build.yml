@@ -35,8 +35,7 @@ jobs:
 
       - name: Build ROM
         run: |
-          pwd
-          ls -la
+          chmod +x tools/sort_symfile.sh
           make genesis
         working-directory: .
 
