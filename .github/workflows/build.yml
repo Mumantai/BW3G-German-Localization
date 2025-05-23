@@ -37,7 +37,7 @@ jobs:
         run: |
           pwd
           ls -la
-          make
+          make genesis
         working-directory: .
 
       - name: Check ROM Hash
