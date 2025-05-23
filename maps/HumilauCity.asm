@@ -123,152 +123,151 @@ HumilauCity_DontLeaveMovement:
 	step_end
 	
 NeighborText_DontLeave:
-	text "Wait, <PLAY_G>!"
+	text "Warte, <PLAY_G>!"
 
-	para "It's dangerous"
-	line "outside of town!"
-	
-	para "You could get"
-	line "attacked by a"
-	cont "wild #MON!"
+	para "Außerhalb der"
+	line "Stadt ist es"
+	para "gefährlich!"
+
+	para "Wilde #MON"
+	line "könnten dich"
+	cont "angreifen!"
 	done
-	
+
 NeighborText_Pokemon:
-	text "Oh wow! What a"
-	line "cute #MON!"
+	text "Oh wow! So ein"
+	line "süßes #MON!"
 	done
-	
+
 NeighborText_Dangerous:
 	text "Oh, hi, <PLAY_G>."
-	
-	para "This is the way"
-	line "to ROUTE 22."
-	
-	para "You'd better not"
-	line "keep going."
 
-	para "It's dangerous"
-	line "outside of town."
-	
-	para "You could get"
-	line "attacked by a"
-	cont "wild #MON!"
+	para "Hier geht es zur"
+	line "ROUTE 22."
+
+	para "Geh lieber nicht"
+	line "weiter."
+
+	para "Da draußen ist es"
+	line "nicht sicher."
+
+	para "Wilde #MON"
+	line "könnten dich"
+	cont "angreifen!"
 	done
-	
+
 HumilauCityTubeBlockerText:
-	text "I was trying to"
-	line "get into the"
-	
-	para "MARINE TUBE to"
-	line "reach UNDELLA"
-	cont "TOWN…"
+	text "Ich wollte in den"
+	line "UNTERSEETUNNEL, um"
 
-	para "But it's crowded"
-	line "with tourists!"
+	para "nach ONDULA zu"
+	line "kommen…"
+
+	para "Aber er ist voll"
+	line "von Touristen!"
 	done
-	
+
 HumilauCityRoamingBlockerText:
-	text "Whew! The tourists"
-	line "have finally gone"
-	cont "home…"
+	text "Puh! Die Touristen"
+	line "sind endlich"
+	cont "verschwunden…"
 	done
-	
-HumilauCityGymBlockerText:
-	text "It looks like the"
-	line "GYM LEADER is"
-	cont "away…"
 
-	para "Darn! I wanted to"
-	line "challenge the gym!"
+HumilauCityGymBlockerText:
+	text "Der ARENALEITER"
+	line "ist wohl gerade"
+	cont "nicht da…"
+
+	para "Ich wollte doch"
+	line "gegen ihn kämpfen!"
 	done
-	
+
 HumilauCityPCBlockerText:
 	text "Hmm…"
 
-	para "Which #MON"
-	line "should I take"
-	cont "with me today…?"
+	para "Welches #MON"
+	line "nehm ich heute"
+	cont "wohl mit…?"
 	done
-	
+
 HumilauCityFisherText:
-	text "Technology is"
-	line "incredible!"
-	
-	para "People can now"
-	line "modify games and"
-	
-	para "share them on"
-	line "the internet!"
+	text "Die Technik ist"
+	line "unglaublich!"
+
+	para "Man kann jetzt"
+	line "Spiele verändern"
+
+	para "und im Internet"
+	line "mit teilen!"
 	done
-	
+
 HumilauCityLassText:
-	text "Isn't it peaceful"
-	line "living out here"
-	cont "on the waves?"
+	text "Ist es nicht toll,"
+	line "so nah am Meer"
+	cont "zu leben?"
 	done
-	
+
 HumilauCityCooltrainerFText:
-	text "Wow, the ocean"
-	line "view is so"
-	cont "beautiful!"
+	text "Wow, der Blick"
+	line "aufs Meer ist so"
+	cont "umwerfend!"
 	done
-	
+
 HumilauCityCooltrainerMText:
-	text "I took my girl-"
-	line "friend on vacation"
-	cont "here."
-	
-	para "It sure must be"
-	line "nice living out"
-	cont "here!"
+	text "Ich bin mit meiner"
+	line "Freundin hier zum"
+	cont "Urlaub."
+
+	para "Hier zu leben,"
+	line "muss wirklich"
+	cont "schön sein!"
 	done
-	
+
 HumilauCityYoungsterText:
-	text "I want to go play"
-	line "in the grass, but"
-	
-	para "my mom says it's"
-	line "dangerous."
-	
-	para "I sure wish I had"
-	line "a #MON to take"
-	cont "with me!"
+	text "Ich will im hohen"
+	line "Gras spielen, aber"
+
+	para "meine Mama sagt,"
+	line "das ist viel zu"
+
+	para "gefährlich."
+	line "Hätte ich doch"
+	cont "nur ein #MON!"
 	done
-	
+
 HumilauCityTeacherText:
-	text "Hi, <PLAY_G>."
-	
-	para "If you're planning"
-	line "on leaving town,"
-	
-	para "It's a good idea"
-	line "to stop by the"
-	cont "# MART."
-	
-	para "They have all"
-	line "kinds of things"
-	
-	para "that will help"
-	line "you out!"
+	text "Hallo, <PLAY_G>."
+
+	para "Warst du schon im"
+	line "#-SUPERMARKT?"
+
+	para "Dort findest du"
+	line "nützliche Items,"
+	cont "für deine Reise."
+
+	para "Schau auf jeden"
+	line "Fall vorbei, bevor"
+
+	para "du dich auf den"
+	line "Weg machst!"
 	done
-	
+
 HumilauCitySignText:
-	text "HUMILAU CITY"
+	text "ABIDAYA CITY"
 
-	para "A resort with"
-	line "calm and"
-	cont "sparkling seas!"
+	para "Die Stadt des"
+	line "ruhigen Seegangs."
 	done
-	
+
 HumilauMarlonSignText:
-	text "MARLON's house."
+	text "BENSONs Haus."
 	done
-	
-HumilauMarineTubeSignText:
-	text "MARINE TUBE"
 
-	para "Undersea passage"
-	line "to UNDELLA TOWN."
+HumilauMarineTubeSignText:
+	text "UNTERSEETUNNEL"
+
+	para "Unterwasserweg"
+	line "nach ONDULA."
 	done
 	
 HumilauCity_MapEvents:
