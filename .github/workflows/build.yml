@@ -1,0 +1,36 @@
+name: Build ROM
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make python3 python3-pip
+          # RGBDS installieren
+          wget https://github.com/gbdev/rgbds/releases/download/v0.6.1/rgbds-0.6.1-linux.tar.gz
+          tar -xzf rgbds-0.6.1-linux.tar.gz
+          sudo cp rgbds-0.6.1-linux/* /usr/local/bin/
+
+      - name: Build ROM
+        run: make all
+
+      - name: Prüfe ROM-Hash
+        run: make compare
+
+      - name: Lade Artefakt hoch
+        uses: actions/upload-artifact@v4
+        with:
+          name: bw3genesis.gbc
+          path: bw3genesis.gbc
