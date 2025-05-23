@@ -31,7 +31,9 @@ jobs:
           sudo make install
 
       - name: Build ROM
-        run: make all
+        run: |
+          ls -la
+          make all
         working-directory: .
 
       - name: Check ROM Hash
