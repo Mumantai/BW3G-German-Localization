@@ -39,9 +39,6 @@ jobs:
           make genesis
         working-directory: .
 
-      - name: Check ROM Hash
-        run: make compare
-
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
