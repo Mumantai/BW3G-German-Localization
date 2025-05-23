@@ -63,7 +63,7 @@
 	const PAL_BG_TEXT   ; 7
 	
 
-const_value set $80
+const_value set_ $80
 	const PAL_BG_PRIORITY_GRAY   ; 80
 	const PAL_BG_PRIORITY_RED    ; 81
 	const PAL_BG_PRIORITY_GREEN  ; 82
