@@ -26,12 +26,12 @@ HumilauTradeHouseBookshelfScript:
 	jumpstd magazinebookshelf
 
 HumilauTradeHouseNoPokeText:
-	text "Hi, I'm looking to"
-	line "trade #MON."
-	
-	para "Oh, you don't have"
-	line "any #MON?"
-	cont "That's too bad."
+	text "Hey, wilst du"
+	line "#MON tauschen?"
+
+	para "Oh, du hast gar"
+	line "keine #MON?"
+	cont "Zu schade."
 	done
 
 HumilauTradeHouse_MapEvents:

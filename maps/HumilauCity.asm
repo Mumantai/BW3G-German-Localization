@@ -198,7 +198,7 @@ HumilauCityFisherText:
 	line "Spiele verändern"
 
 	para "und im Internet"
-	line "mit teilen!"
+	line "mit allen teilen!"
 	done
 
 HumilauCityLassText:

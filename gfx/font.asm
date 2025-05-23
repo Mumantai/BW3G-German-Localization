@@ -1,5 +1,6 @@
 Font:
-INCBIN "gfx/font/font.1bpp"
+;INCBIN "gfx/font/font.1bpp"
+INCBIN "gfx/font/french_german.1bpp"
 
 FontBattleExtra:
 INCBIN "gfx/font/font_battle_extra.2bpp"
