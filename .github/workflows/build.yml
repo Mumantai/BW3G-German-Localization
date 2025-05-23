@@ -1,39 +1,43 @@
 name: Build ROM
 
-      on:
-        push:
-          branches: [ main ]
-        pull_request:
-          branches: [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-      jobs:
-        build:
-          runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update and Install Software
+        run: |
+          sudo apt update
+          sudo ACCEPT_EULA=Y apt -y --fix-missing --allow-downgrades upgrade
+          sudo apt -y --allow-downgrades install make g++-10 bison git python-is-python3 python3-pip bison pkg-config libpng-dev
+          sudo pip install pypng
 
-          steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
+      - name: Checkout rgbds
+        uses: actions/checkout@v4.2.1
+        with:
+          repository: gbdev/rgbds
+          path: rgbds
+          ref: 'v0.6.1'
 
-            - name: Install dependencies
-              run: |
-                sudo apt-get update
-                sudo apt-get install -y make python3 python3-pip
+      - name: Install rgbds
+        run: |
+          cd rgbds
+          make Q=
+          sudo make install
+        working-directory: ~
+      - name: Build ROM
+        run: make all
 
-            - name: RGBDS aus Source bauen
-              run: |
-                git clone --branch v0.6.1 --depth 1 https://github.com/gbdev/rgbds.git
-                cd rgbds
-                make
-                sudo make install
+      - name: Check ROM Hash
+        run: make compare
 
-            - name: Build ROM
-              run: make all
-
-            - name: Prüfe ROM-Hash
-              run: make compare
-
-            - name: Lade Artefakt hoch
-              uses: actions/upload-artifact@v4
-              with:
-                name: bw3genesis.gbc
-                path: bw3genesis.gbc
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bw3genesis.gbc
+          path: bw3genesis.gbc
