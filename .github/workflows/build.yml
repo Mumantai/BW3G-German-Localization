@@ -17,6 +17,9 @@ jobs:
           sudo apt -y --allow-downgrades install make g++-10 bison git python-is-python3 python3-pip bison pkg-config libpng-dev
           sudo pip install pypng
 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Checkout rgbds
         uses: actions/checkout@v4.2.1
         with:
@@ -32,6 +35,7 @@ jobs:
 
       - name: Build ROM
         run: |
+          pwd
           ls -la
           make all
         working-directory: .
