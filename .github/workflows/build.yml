@@ -37,7 +37,7 @@ jobs:
         run: |
           pwd
           ls -la
-          make all
+          make
         working-directory: .
 
       - name: Check ROM Hash
