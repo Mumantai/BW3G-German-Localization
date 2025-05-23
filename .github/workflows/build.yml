@@ -1,39 +1,39 @@
 name: Build ROM
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+      on:
+        push:
+          branches: [ main ]
+        pull_request:
+          branches: [ main ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+      jobs:
+        build:
+          runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+          steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
 
-       - name: Install dependencies
-               run: |
-                 sudo apt-get update
-                 sudo apt-get install -y make python3 python3-pip
+            - name: Install dependencies
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y make python3 python3-pip
 
-             - name: RGBDS aus Source bauen
-               run: |
-                 git clone --branch v0.6.1 --depth 1 https://github.com/gbdev/rgbds.git
-                 cd rgbds
-                 make
-                 sudo make install
+            - name: RGBDS aus Source bauen
+              run: |
+                git clone --branch v0.6.1 --depth 1 https://github.com/gbdev/rgbds.git
+                cd rgbds
+                make
+                sudo make install
 
-      - name: Build ROM
-        run: make all
+            - name: Build ROM
+              run: make all
 
-      - name: Prüfe ROM-Hash
-        run: make compare
+            - name: Prüfe ROM-Hash
+              run: make compare
 
-      - name: Lade Artefakt hoch
-        uses: actions/upload-artifact@v4
-        with:
-          name: bw3genesis.gbc
-          path: bw3genesis.gbc
+            - name: Lade Artefakt hoch
+              uses: actions/upload-artifact@v4
+              with:
+                name: bw3genesis.gbc
+                path: bw3genesis.gbc
