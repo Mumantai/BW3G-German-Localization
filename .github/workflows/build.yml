@@ -30,8 +30,10 @@ jobs:
           make Q=
           sudo make install
         working-directory: ~
+
       - name: Build ROM
         run: make all
+        working-directory: .
 
       - name: Check ROM Hash
         run: make compare
