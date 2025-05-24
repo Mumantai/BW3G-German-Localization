@@ -83,13 +83,13 @@
 	charmap "X",         $b7
 	charmap "Y",         $b8
 	charmap "Z",         $b9
+	charmap "Ä",         $ba
+	charmap "Ö",         $bb
+	charmap "Ü",         $bc
 
-	charmap "(",         $ba
-	charmap ")",         $bb
-	charmap ":",         $bc
-	charmap "'s",        $bd
-	charmap "'t",        $be
-	charmap "'d",        $bf
+	charmap "(",         $bd
+	charmap ")",         $be
+	charmap ":",         $bf
 
 	charmap "a",         $c0
 	charmap "b",         $c1

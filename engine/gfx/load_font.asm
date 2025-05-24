@@ -20,16 +20,20 @@ Unreferenced_Functionfb43f:
 
 _LoadStandardFont::
 	ld de, Font
-	ld hl, vTiles1 tile $20
+	ld hl, vTiles1
 	lb bc, BANK(Font), 32 ; "A" to "'d"
 	call Get1bpp_2
 	ld de, Font + 32 * LEN_1BPP_TILE
-	ld hl, vTiles1 tile $40
+	ld hl, vTiles1 tile $20
 	lb bc, BANK(Font), 26 ; "a" to "z"
 	call Get1bpp_2
 	ld de, Font + 64 * LEN_1BPP_TILE
-	ld hl, vTiles1 tile $60
+	ld hl, vTiles1 tile $40
 	lb bc, BANK(Font), 32 ; "'" to "9"
+	call Get1bpp_2
+	ld de, Font + 96 * LEN_1BPP_TILE
+	ld hl, vTiles1 tile $60
+	lb bc, BANK(Font), 32 ; " " to "…"
 	call Get1bpp_2
 	ret
 
